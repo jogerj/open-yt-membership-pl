@@ -1,14 +1,6 @@
 javascript:(function () {
     var channelId = function () {
-        var id;
-        Array.prototype.slice.call(document.getElementsByTagName('link')).forEach(function (element) {
-            if (element.getAttribute('rel') === 'canonical') {
-                console.log('Found channel link');
-                id = element.getAttribute('href').substr(32);
-            }
-        });
-        return id;
-        
+         
         if (
             window.hasOwnProperty('ytInitialPlayerResponse') &&
             window['ytInitialPlayerResponse'] != null &&
@@ -18,6 +10,14 @@ javascript:(function () {
             console.log('Found channel in ytInitialPlayerResponse');
             return window['ytInitialPlayerResponse']['videoDetails']['channelId'];
         }
+        var id;
+        Array.prototype.slice.call(document.getElementsByTagName('link')).forEach(function (element) {
+            if (element.getAttribute('rel') === 'canonical') {
+                console.log('Found channel link');
+                id = element.getAttribute('href').substr(32);
+            }
+        });
+        return id;
 
         
     }();
