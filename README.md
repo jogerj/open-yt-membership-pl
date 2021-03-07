@@ -1,3 +1,6 @@
+# Usage
+On any YouTube video or channel page, click on the bookmarklet to instantly go to membership playlist of the video or channel owner.
+
 # Install
 1. Copy content of [membership-pl.js](#file-membership-pl-js)
 2. Create new bookmark  
@@ -5,8 +8,6 @@
 4. Paste script in URL
 5. Give name to bookmark and save
 
-# Usage
-On any YouTube video or channel page, click on the applet to instantly go to membership playlist of the video or channel owner.
 
 # Debugging and Troubleshooting
 If it doesn't work try refreshing page or clicking on channel page or on a video.
