@@ -1,6 +1,6 @@
 # Install
 1. Copy content of [membership-pl.js](#file-membership-pl-js)
-2. Create new bookmark
+2. Create new bookmark  
     For Chrome: Right click bookmark bar and "Add page..."
 4. Paste script in URL
 5. Give name to bookmark and save
