@@ -10,6 +10,6 @@ On any YouTube video or channel page, click on the bookmarklet to instantly go t
 
 
 # Debugging and Troubleshooting
-If it doesn't work try refreshing page or clicking on channel page or on a video.
+If it doesn't work try refreshing page before clicking the bookmarklet.
 
 F12 to open console to see the problem. Comment below if something breaks.
