@@ -1,6 +1,5 @@
 javascript:(function () {
     var channelId = function () {
-         
         if (
             window.hasOwnProperty('ytInitialPlayerResponse') &&
             window['ytInitialPlayerResponse'] != null &&
@@ -18,8 +17,6 @@ javascript:(function () {
             }
         });
         return id;
-
-        
     }();
     if (channelId === undefined) {
         console.log('Could not find a channel ID at ' + location.href);
