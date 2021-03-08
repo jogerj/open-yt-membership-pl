@@ -10,13 +10,13 @@ On any YouTube video or channel page, click on the bookmarklet to instantly go t
 
 
 # Debugging and Troubleshooting
-If it doesn't work try refreshing page before clicking the bookmarklet.
+If it doesn't work try refreshing page before clicking the bookmarklet.  
 
 F12 to open console to see the problem. Comment below if something breaks.
 
 # How it works
-The script grabs the channel ID which is 24 characters long and starts with UC.
-Now for every channel, YouTube has kindly generated a playlist for its videos that are limited to member's only.
-Let uniqueID be the channel ID without `UC`
-The formula is basically `https://www.youtube.com/playlist?list=UUMO<uniqueID>`
-After the playlist link is generated we just tell the browser to open it in another new tab and we're set.
+The script grabs the channel ID which is 24 characters long and starts with UC.  
+Now for every channel, YouTube has kindly generated a playlist for its videos that are limited to member's only.  
+Let uniqueID be the channel ID without `UC`  
+The formula is basically `https://www.youtube.com/playlist?list=UUMO<uniqueID>`  
+After the playlist link is generated we just tell the browser to open it in another new tab and we're set.  
