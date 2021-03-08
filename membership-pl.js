@@ -1,5 +1,26 @@
-javascript:(function () {
-    var channelId = function () {
+javascript:(async function () {
+    const channelId = await async function () {
+        const channelUrlLead = ["https://www.youtube.com/channel/", "http://www.youtube.com/channel/"];
+        const targets = [location.href];
+        for(const t of targets){
+            for(const c of channelUrlLead){
+                if (t && t.startsWith(c)){
+                    return t.split(/[?#]/)[0].substr(c.length);
+                }
+            }
+        };
+        const resp = await fetch(location.href);
+        const doc = new DOMParser().parseFromString(await resp.text(), "text/html");
+        try {
+            return doc.querySelector("meta[itemprop='channelId']").getAttribute("content");
+        } catch (_) {};
+    }();
+    if (channelId) {
+        window.open(`https://www.youtube.com/playlist?list=UUMO${channelId.substr(2, 22)}`, "_blank");
+    } else {
+        console.log(`[MEMBERSHIP PLAYLIST REDIRECT] Cannot get channel ID on ${location.href}`);
+        // fallback
+        var chanId = function () {
         if (
             window.hasOwnProperty('ytInitialPlayerResponse') &&
             window['ytInitialPlayerResponse'] != null &&
@@ -9,6 +30,7 @@ javascript:(function () {
             console.log('Found channel in ytInitialPlayerResponse');
             return window['ytInitialPlayerResponse']['videoDetails']['channelId'];
         }
+        // second fallback
         var id;
         Array.prototype.slice.call(document.getElementsByTagName('link')).forEach(function (element) {
             if (element.getAttribute('rel') === 'canonical') {
@@ -17,12 +39,12 @@ javascript:(function () {
             }
         });
         return id;
-    }();
-    if (channelId === undefined) {
-        console.log('Could not find a channel ID at ' + location.href);
-    } else {
-        console.log('Going to membership playlist URL');
-        window.open('https://www.youtube.com/playlist?list=UUMO' + channelId.substring(channelId.length-22), '_blank');
+        }();
+        if (chanId === undefined) {
+            console.warn('Could not find a channel ID at ${location.href}');
+        } else {
+            console.log('Going to membership playlist URL');
+            window.open('https://www.youtube.com/playlist?list=UUMO' + chanId.substring(channelId.length-22), '_blank');
+        }
     }
 })();
-
