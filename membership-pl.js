@@ -25,7 +25,7 @@ javascript:(function () {
         console.log('Could not find a channel ID at ' + location.href);
     } else {
         console.log('Going to membership playlist URL');
-        location.href = 'https://www.youtube.com/playlist?list=UUMO' + channelId.substring(channelId.length-22);
+        window.open('https://www.youtube.com/playlist?list=UUMO' + channelId.substring(channelId.length-22), '_blank');
     }
 })();
 
