@@ -1,3 +1,8 @@
+# DEPRECATED
+**This gist is for archival purposes only. This gist is not maintained. See [new gist here](https://gist.github.com/jogerj/b5cfd25592f3eaf89801d09819601d63) for new updated solution.**
+
+
+
 # Usage
 On any YouTube video or channel page, click on the bookmarklet to instantly go to "Member's only" playlist of the video or channel owner.
 
