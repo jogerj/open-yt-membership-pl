@@ -5,8 +5,8 @@ On any YouTube video or channel page, click on the bookmarklet to instantly go t
 1. Copy content of [membership-pl.min.js](#file-membership-pl-min-js)
 2. Create new bookmark  
     For Chrome: Right click bookmark bar and "Add page..."
-4. Paste script in URL
-5. Give name to bookmark and save
+3. Paste script in URL
+4. Give name to bookmark and save
 
 
 # Debugging and Troubleshooting
